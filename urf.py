@@ -5,8 +5,14 @@ import numpy as np
 # ---------------------------
 # Load Trained Model
 # ---------------------------
-model = pickle.load(open(r"C:\Users\Hp\Desktop\proj\model.pkl", "rb"))
-print(model)
+# model = pickle.load(open(r"C:\Users\Hp\Desktop\proj\model.pkl", "rb"))
+# print(model)
+import os
+
+# Load trained model (works on Streamlit Cloud)
+model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
+with open(model_path, "rb") as f:
+    model = pickle.load(f)
 
 
 
