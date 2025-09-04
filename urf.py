@@ -6,6 +6,8 @@ import numpy as np
 # Load Trained Model
 # ---------------------------
 model = pickle.load(open(r"C:\Users\Hp\Desktop\proj\model.pkl", "rb"))
+print(model)
+
 
 
 st.title("🚗 Car Price Prediction App")
@@ -16,9 +18,9 @@ st.write("Is app se aap apni gaadi ki *selling price* predict kar sakte ho.")
 # ---------------------------
 st.header("Enter Car Details:")
 
-year = st.number_input("Year of Purchase", min_value=1990, max_value=2025, value=2015)
-present_price = st.number_input("Present Price (in lakhs)", min_value=0.0, max_value=50.0, value=5.0)
-kms_driven = st.number_input("Kms Driven", min_value=0, max_value=1000000, value=50000)
+year = st.number_input("Year of Purchase", min_value=1600, max_value=2025, value=2000)
+present_price = st.number_input("Present Price (in lakhs)", min_value=0.0, max_value=50.0, value=0.0)
+kms_driven = st.number_input("Kms Driven", min_value=0, max_value=1000000, value=0)
 
 fuel_type = st.selectbox("Fuel Type", ["Petrol", "Diesel", "CNG"])
 seller_type = st.selectbox("Seller Type", ["Dealer", "Individual"])
